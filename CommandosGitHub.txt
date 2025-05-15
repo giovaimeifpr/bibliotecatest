@@ -38,4 +38,9 @@ git add .
 // depois comando para realizar a operação
 git commit -m "Teste commit"
 
+// comando para voltar alterações da pasta padrão sem deletar arquivos
+
+git reset --hard HEAD   (remove alterações)
+git clean -fd       (remove arquivos)
+
 

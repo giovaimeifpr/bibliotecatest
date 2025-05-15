@@ -2,10 +2,18 @@ package br.edu.ifpr.biblioteca_spring.models;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 public class Usuario {
 
     private Long id;
+
+    // esses @dois arrobas garantem o retorno do erro la no form.html
+    @NotBlank(message = "O nome não pode estar vazio")
+    @Size(min = 1, max = 25, message = "O nome deve possuir no máximo 25 caracteres")
     private String nome;
+
     private String cpf;
     private boolean bloqueado;
     private LocalDate dataDeDesbloqueio;
