@@ -7,9 +7,11 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import br.edu.ifpr.biblioteca_spring.exceptions.UsuariosException;
 import br.edu.ifpr.biblioteca_spring.models.Usuario;
 import br.edu.ifpr.biblioteca_spring.service.UsuariosService;
 import jakarta.validation.Valid;
+
 
 @Controller
 @RequestMapping("/usuarios")
@@ -40,4 +42,15 @@ public class UsuarioController {
         usuarioService.adicionar(usuario);
         return "redirect:/usuarios";
     }
+    
+    @GetMapping("/teste")
+    public String erroForcado() {
+        throw new UsuariosException("Erro forçado de teste - error.html");
+    }
+
+    @GetMapping("/teste500")
+    public String erroForcado500() {
+        throw new RuntimeException("Erro forçado de teste - 500.");
+    }
+
 }

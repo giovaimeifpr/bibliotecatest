@@ -3,6 +3,9 @@ Alterações pedidas pelo professor.
 Ler e compreender o funcionamento do software (teste de uso são importantes);
 
 Implementar recursos que previnam páginas de erros genéricas e exibam páginas de erros adequadas.
+    Gio - foi criado pasta error dentro de controllers coma classe para tratar os erros do spring
+    Gio - foi criado a pasta errors dentro de templates para mostrar o html dos erros
+    Gio - no Usuario Controller foi adicionado duas classe para testar os erros.
     
 Validar os campos de entrada, não aceitando valores que julgarem inválidos e exibindo mensagens de erros para o usuário quando necessário;
     Gio - Validei o campo de nome do usuário para não ser cadastrado em branco e ter max 25 letras
