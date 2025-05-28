@@ -1,0 +1,47 @@
+Alterações pedidas pelo professor.
+
+Ler e compreender o funcionamento do software (teste de uso são importantes);
+
+Implementar recursos que previnam páginas de erros genéricas e exibam páginas de erros adequadas.
+    Gio - foi criado pasta error dentro de controllers coma classe para tratar os erros do spring
+    Gio - foi criado a pasta errors dentro de templates para mostrar o html dos erros
+    Gio - no Usuario Controller foi adicionado duas classe para testar os erros.
+    
+Validar os campos de entrada, não aceitando valores que julgarem inválidos e exibindo mensagens de erros para o usuário quando necessário;
+    Gio - Validei o campo de nome do usuário para não ser cadastrado em branco e ter max 25 letras
+    Gio - Foi feito alterações no UsuarioController, Usuario, usuario/form.html
+
+Implementar testes unitários que garantam que o software atende as regras de negócio;
+
+Teste de integração que garantam o que o software funciona como o esperado quando executado.
+
+
+Testes unitários recomendados (não limitantes nem obrigatórios):
+
+UsuarioService
+
+    Deve adicionar pessoa corretamente
+    Deve retornar pessoa por ID existente
+    Deve lançar exceção ao buscar ID inexistente
+
+LivroService
+
+    Deve adicionar livro corretamente
+    Deve listar apenas livros disponíveis
+    Deve marcar livro como emprestado
+    Deve marcar livro como disponível novamente após devolução
+
+EmprestimoService
+
+    Deve permitir empréstimo se a pessoa não estiver bloqueada e tiver menos de 3 empréstimos
+    Não deve permitir empréstimo se o livro não estiver disponível
+    Não deve permitir empréstimo se a pessoa já tiver 3 livros
+    Não deve permitir empréstimo se a pessoa estiver bloqueada
+    Deve calcular dataDeDesbloqueio corretamente com base em atraso
+    Deve agendar devolução para dia útil (pular sábados e domingos)
+
+Testes de integração recomendados (não limitantes nem obrigatórios):
+
+    Testar o endpoint de cadastro de pessoas
+    Testar o endpoint de empréstimo
+    Testar o endpoint de devolução de um livro

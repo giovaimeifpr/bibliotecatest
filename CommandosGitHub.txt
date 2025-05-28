@@ -1,0 +1,46 @@
+Aulas github
+
+https://www.youtube.com/watch?v=kbWbRx3-9IY (como usar)
+
+
+
+Comandos para o github (Inicio projeto)
+
+// configurar git no vscode, para ele identificar o usuario ao realizar os git
+git config --global user.name "Nome Usuario"
+git config --global user.email "email@email.com"
+
+// transformar a pasta do vscode em repositorio
+git init
+
+// adicionar um leia-me
+git add README.md
+
+// fazer o primeiro commit para sincronizar com o github
+git commit -m "first commit"
+
+//definir a branch principal que vai receber os commit (nesse caso como main)
+git branch -M main
+
+//definir o repositorio que vai receber os arquivos
+git remote add origin https://github.com/giovaimeifpr/teste.git
+
+//e colocar as pastas do vscode no repositorio novo
+git push -u origin main
+
+// A cada alteração os arquivos no vscode ficam marcados para atualizar no git,
+// esse comando verifica quais arquivos foram modificados
+git status
+
+// para fazer a atualização para todos
+git add .
+
+// depois comando para realizar a operação
+git commit -m "Teste commit"
+
+// comando para voltar alterações da pasta padrão sem deletar arquivos
+
+git reset --hard HEAD   (remove alterações)
+git clean -fd       (remove arquivos)
+
+
