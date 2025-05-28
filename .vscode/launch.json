@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BibliotecaSpringApplication<biblioteca_spring>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.edu.ifpr.biblioteca_spring.BibliotecaSpringApplication",
+            "projectName": "biblioteca_spring",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
