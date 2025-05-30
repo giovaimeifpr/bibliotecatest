@@ -12,6 +12,9 @@ Validar os campos de entrada, não aceitando valores que julgarem inválidos e e
     Gio - Foi feito alterações no UsuarioController, Usuario, usuario/form.html
 
 Implementar testes unitários que garantam que o software atende as regras de negócio;
+    Karen - Fiz teste com a classe LivroService. Adicionei alguns métodos para cumprir os requisitos.
+            Em Livro e EmprestimoService, alterei "disponível" para "emprestado".
+            Inclui o arquivo LivroServiceTest para fazer os testes.
 
 Teste de integração que garantam o que o software funciona como o esperado quando executado.
 

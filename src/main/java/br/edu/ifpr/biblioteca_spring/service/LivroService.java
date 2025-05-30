@@ -1,14 +1,14 @@
 
 package br.edu.ifpr.biblioteca_spring.service;
 
-import org.springframework.stereotype.Service;
-
-import br.edu.ifpr.biblioteca_spring.models.Livro;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
+
+import org.springframework.stereotype.Service;
+
+import br.edu.ifpr.biblioteca_spring.models.Livro;
 
 @Service
 public class LivroService {
@@ -35,7 +35,16 @@ public class LivroService {
         return l;
     }
 
-       
+    public List<Livro> listarDisponiveis() {
+        List<Livro> disponiveis = new ArrayList<>();
+        for (Livro l : livros) {
+            if (l.isDisponivel()) {
+                disponiveis.add(l);
+            }
+        }
+        return disponiveis;
+    }
+    
     public void limpar() {
         livros.clear();
     }
